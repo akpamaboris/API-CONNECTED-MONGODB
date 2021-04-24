@@ -5,10 +5,9 @@ require("dotenv").config();
 
 const dbURI = process.env.DB_URI;
 
-mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true });
-
-mongoose.connection.on("connected", function () {
-  console.log("Mongoose Connected");
+mongoose.connect(process.env.DB_URI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
 });
 
 const app = express();
