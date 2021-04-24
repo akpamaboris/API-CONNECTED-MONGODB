@@ -3,7 +3,7 @@ const express = require("express");
 const formidable = require("express-formidable");
 require("dotenv").config();
 
-const dbURI = process.env.DB_URI;
+const dbURI = "process.env.DB_URI";
 
 mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true });
 
